@@ -1,0 +1,41 @@
+{
+  "name": "adonis-profile",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node ace build",
+    "start": "node ace serve --watch",
+    "lint": "eslint . --ext=.ts",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^2.1.2",
+    "adonis-preset-ts": "^1.0.4",
+    "eslint": "^7.0.0",
+    "eslint-plugin-adonis": "^1.0.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "pino-pretty": "^4.0.0",
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.2",
+    "youch": "^2.0.10",
+    "youch-terminal": "^1.0.0"
+  },
+  "dependencies": {
+    "@adonisjs/ace": "^6.9.3",
+    "@adonisjs/core": "^5.0.0-preview-rc-1.6",
+    "@adonisjs/fold": "^6.3.5",
+    "@adonisjs/session": "^3.0.3",
+    "@adonisjs/view": "^2.0.6",
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.4",
+    "proxy-addr": "^2.0.6",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.19"
+  }
+}
