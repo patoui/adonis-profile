@@ -2,7 +2,7 @@
 
 My personal profile site built with AdonisJS
 
-# Installation
+## Installation
 
 Install npm dependencies
 
@@ -16,7 +16,7 @@ Copy dotenv config and update values to your local envrionment
 cp .env.example .env
 ```
 
-# Running Webserver
+## Running Webserver
 
 ```bash
 node ace serve --watch
