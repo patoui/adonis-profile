@@ -28,4 +28,5 @@ Route.get('health', async ({ response }) => {
 
 Route.on('/').render('welcome')
 
-Route.get('/blog', 'PostsController.index');
+Route.get('/blog', 'PostsController.index').as('posts.index')
+Route.get('/posts/:slug', 'PostsController.show').as('posts.show')
