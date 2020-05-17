@@ -30,3 +30,15 @@ Route.on('/').render('welcome')
 
 Route.get('/blog', 'PostsController.index').as('posts.index')
 Route.get('/posts/:slug', 'PostsController.show').as('posts.show')
+
+Route.on('register').render('register')
+Route.post('register', 'AuthController.register')
+
+Route.on('login').render('login')
+Route.post('/login', 'AuthController.login')
+Route.get('/logout', 'AuthController.logout')
+
+Route.get('/dashboard', async ({ auth }) => {
+  const user = await auth.authenticate()
+  return `Hello user! Your email address is ${user.email}`
+})
